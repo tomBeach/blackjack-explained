@@ -113,7 +113,7 @@ ul {
     height: 360px;
 }
 
-/* ======= info ======= */
+/* ======= info text ======= */
 #howIdidIt {
     width: 300px;
     height: auto;
@@ -121,8 +121,8 @@ ul {
 }
 #scrollWindow {
     height: 160px;
-    max-width: 300px;
-    margin-top: 180px;
+    width: 300px;
+    margin-top: 200px;
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #eee;

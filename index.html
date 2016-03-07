@@ -68,7 +68,7 @@
 						<div class="infoText">Tracking rowspans can be more challenging. When a <span class="hilite">second index cell</span> is to the right of a rowspanned region, rowspans have no effect -- if both index cells are on the same row.</div>
 						<div class="infoText">If the second index cell is in a row containing a rowspanned cell to its left, it will be <span class="hilite">shifted</span> one column to the left unless corrected.</div>
 						<div class="infoText">The challenge: finding index cells with rowspans requires looking at all rows <span class="hilite">above</span> the target row, since rowspans are only assigned on the index cell itself.</div>
-						<div class="infoText">My solution was to set up an array of rowspaned cell objects, each of which is initialize to <span class="hilite">FALSE</span>.</div>
+						<div class="infoText">My solution was to set up an array of rowspaned cell objects, each of which is initialized to <span class="hilite">FALSE</span>.</div>
 						<div class="infoText">When a rowspan is assigned, all affected cells in the span region are set to <span class="hilite">TRUE</span> in appropriate object in the rowspans array.</div>
 						<div class="infoText">This way, only table settings in the <span class="hilite">target row</span> needs to be checked for rowspans.</div>
 						<div class="infoText">Finally, since regions may span both columns and rows, both span types need to be checked in order to correct the <span class="hilite">'target' column</span> for regions to the right of the spanned region.</div>

@@ -36,11 +36,14 @@ function init() {
     // });
 
     // == toggle scroll tooltips (avoid annoying user with help)
-    $("#scrollWindow").on('mouseover', function(event) {
-        updateInfoText();
-    });
+    // $("#scrollWindow").on('mouseover', function(event) {
+    //     updateInfoText();
+    // });
     $("#gridWindow").on('mouseover', function(event) {
         infoFlag = false;
+    });
+    $("#scrollWindow").on('mouseleave', function(event) {
+        updateInfoText();
     });
 
     var gridDataArray = [
@@ -161,10 +164,8 @@ function init() {
     function updateInfoText() {
         console.log("updateInfoText");
 
-        if (infoFlag == false) {
-            $(info).html("scroll <span class='hilite'>slowly</span> for descriptions...");
-            infoFlag = true;
-        }
+        $(info).css("color", "red");
+        $(info).html("<p>scroll below <span class='hilite'>slowly</span> for descriptions...</p>");
     }
 
     // ======= ======= ======= updateGridText ======= ======= =======
@@ -172,7 +173,8 @@ function init() {
         // console.log("updateGridText");
         // console.log("  next/prevTextTrigger: " + scrollTop + " " + nextTextTrigger + "/" + prevTextTrigger);
 
-        $(info).text("");
+        $(info).text(".");
+        $(info).css("color", "white");
         scrollTop = $(scrollWindow).scrollTop() - scrollStart;
         if (sectionFlag == false) {
             $(sectionTitle).text(gridDataArray[nextIndex].section);
